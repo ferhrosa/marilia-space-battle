@@ -1,0 +1,1452 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>SpaceBattle</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3sr71p8ab8e91</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TiledBackgroundGame" sid="981639196174106">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\spaceshooter\Backgrounds\purple.png" />
+        </object-type>
+        <object-type name="Mouse" sid="185509546177410">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Keyboard" sid="262732629939282">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Laser" sid="423612661063427">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="631965306810012">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="141823661721924">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816956057430035" speed="5">
+                    <frame duration="1" hotspotX="0.486486" hotspotY="0.555556" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\spaceshooter\PNG\Lasers\laserRed03.png">
+                        <collision-poly>
+                            <point x="0.972973" y="0.111111" />
+                            <point x="1" y="0.444444" />
+                            <point x="0.972973" y="0.888889" />
+                            <point x="0.513514" y="1" />
+                            <point x="0.027027" y="0.888889" />
+                            <point x="0" y="0.444444" />
+                            <point x="0.027027" y="0.111111" />
+                            <point x="0.513514" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy" sid="252623076555386">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="189635764787767">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="20" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="588103565144984" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\spaceshooter\PNG\Enemies\enemyBlack2.png">
+                        <collision-poly>
+                            <point x="0.261905" y="0.788462" />
+                            <point x="0.0119048" y="0.5" />
+                            <point x="0.261905" y="0.211538" />
+                            <point x="0.5" y="0.0480769" />
+                            <point x="0.785714" y="0.173077" />
+                            <point x="0.797619" y="0.5" />
+                            <point x="0.785714" y="0.826923" />
+                            <point x="0.5" y="0.951923" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack1.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.446602" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack3.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack4.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494845" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack5.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue1.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue2.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.495146" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue3.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue4.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494845" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue5.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen1.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen2.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.495146" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen3.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen4.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494845" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen5.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed1.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed2.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.495146" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed3.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed4.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494845" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed5.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Explosion" sid="951957153838415">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="277535400860734">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="9" loop="0" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="147116260621327" speed="30">
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.5" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\kenney_spaceshooterextension\PNG\Sprites X2\Effects\spaceEffects_006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\kenney_spaceshooterextension\PNG\Sprites X2\Effects\spaceEffects_009.png" />
+                    <frame duration="1" hotspotX="0.508475" hotspotY="0.509091" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\kenney_spaceshooterextension\PNG\Sprites X2\Effects\spaceEffects_011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\kenney_spaceshooterextension\PNG\Sprites X2\Effects\spaceEffects_012.png" />
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.507692" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\kenney_spaceshooterextension\PNG\Sprites X2\Effects\spaceEffects_013.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\kenney_spaceshooterextension\PNG\Sprites X2\Effects\spaceEffects_014.png" />
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\kenney_spaceshooterextension\PNG\Sprites X2\Effects\spaceEffects_015.png" />
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.507042" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\kenney_spaceshooterextension\PNG\Sprites X2\Effects\spaceEffects_017.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\kenney_spaceshooterextension\PNG\Sprites X2\Effects\spaceEffects_016.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player" sid="214570911573844">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="134660535026639">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="224506067142877">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="431878012352173">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="614333849470356">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479286752542480" speed="5">
+                    <frame duration="1" hotspotX="0.493333" hotspotY="0.494949" original-source="C:\Users\patri\Desktop\Marília - Projeto Open School\spaceshooter\PNG\playerShip1_blue.png">
+                        <image-point name="Weapon" x="0.96" y="0.50505" />
+                        <collision-poly>
+                            <point x="0.69697" y="0.6" />
+                            <point x="0.505051" y="1" />
+                            <point x="0.30303" y="0.6" />
+                            <point x="0.010101" y="0.506667" />
+                            <point x="0.141414" y="0.186667" />
+                            <point x="0.505051" y="0" />
+                            <point x="0.858586" y="0.186667" />
+                            <point x="0.989899" y="0.506667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyBase" sid="853498817462356">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589798869561515" speed="5">
+                    <frame duration="1" hotspotX="0.505495" hotspotY="0.505495" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\ufoRed.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.494505" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.494505" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.494505" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.494505" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Score" sid="374502680355957">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Live" sid="581663831002551">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="706364876808957" speed="5">
+                    <frame duration="1" hotspotX="0.502825" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\playerLife1_blue_1.png" />
+                    <frame duration="1" hotspotX="0.502825" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.502825" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\playerLife1_blue_2.png" />
+                    <frame duration="1" hotspotX="0.502825" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\playerLife1_blue_3.png" />
+                    <frame duration="1" hotspotX="0.502825" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\playerLife1_blue_4.png" />
+                    <frame duration="1" hotspotX="0.502825" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\playerLife1_blue_5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStationModel1" sid="296550845916976">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="784615339947364" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_01.png">
+                        <collision-poly>
+                            <point x="0.0833333" y="0.130435" />
+                            <point x="0.5" y="0" />
+                            <point x="0.916667" y="0.130435" />
+                            <point x="0.944444" y="0.478261" />
+                            <point x="0.916667" y="0.869565" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.869565" />
+                            <point x="0.0555556" y="0.478261" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStationModel2" sid="481744587053673">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="911609969609027" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.515152" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_02.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.961538" y="0.484848" />
+                            <point x="0.846154" y="0.878788" />
+                            <point x="0.5" y="1" />
+                            <point x="0.153846" y="0.878788" />
+                            <point x="0.0384615" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStationModel3" sid="765177375124558">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="626399973108798" speed="5">
+                    <frame duration="1" hotspotX="0.504854" hotspotY="0.516129" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_03.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.961538" y="0.484848" />
+                            <point x="0.846154" y="0.878788" />
+                            <point x="0.5" y="1" />
+                            <point x="0.153846" y="0.878788" />
+                            <point x="0.0384615" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStationModel4" sid="717593112876013">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="583216572764311" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.526316" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_04.png">
+                        <collision-poly>
+                            <point x="0.153846" y="0.210526" />
+                            <point x="0.5" y="0" />
+                            <point x="0.884615" y="0.157895" />
+                            <point x="0.961538" y="0.473684" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.0769231" y="0.473684" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStationModel5" sid="292061735046869">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="636511077804569" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_05.png">
+                        <collision-poly>
+                            <point x="0.06" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.94" y="0.142857" />
+                            <point x="0.96" y="0.47619" />
+                            <point x="0.94" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.06" y="0.857143" />
+                            <point x="0.04" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStationModel6" sid="557647321794621">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233749239591284" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_06.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.730769" y="0.5" />
+                            <point x="0.807692" y="0.895833" />
+                            <point x="0.5" y="1" />
+                            <point x="0.192308" y="0.895833" />
+                            <point x="0.269231" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStation1" sid="249601799652283">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="206957421560487">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947290519091305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_01.png">
+                        <collision-poly>
+                            <point x="0.0833333" y="0.130435" />
+                            <point x="0.5" y="0" />
+                            <point x="0.916667" y="0.130435" />
+                            <point x="0.944444" y="0.478261" />
+                            <point x="0.916667" y="0.869565" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0833333" y="0.869565" />
+                            <point x="0.0555556" y="0.478261" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStation2" sid="758484467943998">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="848757383631934">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118026748725194" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.515152" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_02.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.961538" y="0.484848" />
+                            <point x="0.846154" y="0.878788" />
+                            <point x="0.5" y="1" />
+                            <point x="0.153846" y="0.878788" />
+                            <point x="0.0384615" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStation3" sid="120860608325360">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="301077247848597">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="749426255544926" speed="5">
+                    <frame duration="1" hotspotX="0.504854" hotspotY="0.516129" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_03.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.961538" y="0.484848" />
+                            <point x="0.846154" y="0.878788" />
+                            <point x="0.5" y="1" />
+                            <point x="0.153846" y="0.878788" />
+                            <point x="0.0384615" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStation4" sid="523552306141913">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="190118075801916">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="519150295154996" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.526316" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_04.png">
+                        <collision-poly>
+                            <point x="0.153846" y="0.210526" />
+                            <point x="0.5" y="0" />
+                            <point x="0.884615" y="0.157895" />
+                            <point x="0.961538" y="0.473684" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.0769231" y="0.473684" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStation5" sid="155561204968883">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="801429782456709">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268137348246750" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_05.png">
+                        <collision-poly>
+                            <point x="0.06" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.94" y="0.142857" />
+                            <point x="0.96" y="0.47619" />
+                            <point x="0.94" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.06" y="0.857143" />
+                            <point x="0.04" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStation6" sid="529730508128497">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="228964608555738">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="795550899284548" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_06.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.730769" y="0.5" />
+                            <point x="0.807692" y="0.895833" />
+                            <point x="0.5" y="1" />
+                            <point x="0.192308" y="0.895833" />
+                            <point x="0.269231" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackgroundMenu" sid="792087572020390">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\Backgrounds\blue.png" />
+        </object-type>
+        <object-type name="Instructions" sid="829284609210159">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="PlayerModel" sid="949215684809204">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322301508166241" speed="5">
+                    <frame duration="1" hotspotX="0.506667" hotspotY="0.50505" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\playerShip1_blue.png">
+                        <collision-poly>
+                            <point x="0.6" y="0.30303" />
+                            <point x="1" y="0.494949" />
+                            <point x="0.6" y="0.69697" />
+                            <point x="0.506667" y="0.989899" />
+                            <point x="0.186667" y="0.858586" />
+                            <point x="0" y="0.494949" />
+                            <point x="0.186667" y="0.141414" />
+                            <point x="0.506667" y="0.010101" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel" sid="106361989964476">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="20" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="283488900390443" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack1.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack2.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.495146" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack3.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack4.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494845" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack5.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue1.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue2.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.495146" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue3.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue4.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494845" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue5.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen1.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen2.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.495146" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen3.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen4.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494845" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen5.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed1.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed2.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.495146" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed3.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed4.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494845" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed5.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivesModel" sid="951809094366570">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="594239935348774" speed="5">
+                    <frame duration="1" hotspotX="0.485714" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\playerLife1_blue_1.png">
+                        <collision-poly>
+                            <point x="0.685714" y="0.392857" />
+                            <point x="0.942857" y="0.5" />
+                            <point x="0.828571" y="0.785714" />
+                            <point x="0.0285714" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyBaseModel" sid="875553440059607">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="363434258925734" speed="5">
+                    <frame duration="1" hotspotX="0.505495" hotspotY="0.505495" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\ufoRed.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.494505" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.494505" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.494505" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.494505" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpaceStationModel" sid="422146191747544">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="235900874096502" speed="2">
+                    <frame duration="1" hotspotX="0.518519" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_01.png" />
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_03.png" />
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_04.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_05.png" />
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.512821" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\SpaceStation_06.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayButton" sid="483117913898960">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="332643604824002" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\forward.png">
+                        <collision-poly>
+                            <point x="0.3" y="0.3" />
+                            <point x="0.5" y="0.32" />
+                            <point x="0.6" y="0.4" />
+                            <point x="0.7" y="0.5" />
+                            <point x="0.5" y="0.7" />
+                            <point x="0.3" y="0.7" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="318962971109173">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\Backgrounds\black.png" />
+        </object-type>
+        <object-type name="GameOverText" sid="780233803294073">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="PlayerModelGameOver" sid="162604932328213">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="966510963117288" speed="5">
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.506667" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\playerShip1_blue.png">
+                        <collision-poly>
+                            <point x="0.30303" y="0.4" />
+                            <point x="0.494949" y="0" />
+                            <point x="0.69697" y="0.4" />
+                            <point x="0.989899" y="0.493333" />
+                            <point x="0.858586" y="0.813333" />
+                            <point x="0.494949" y="1" />
+                            <point x="0.141414" y="0.813333" />
+                            <point x="0.010101" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerDamage" sid="379975723773406">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="706005327393260" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Damage\playerShip1_damage3.png">
+                        <collision-poly>
+                            <point x="0.55" y="0.723684" />
+                            <point x="0.5" y="0.0131579" />
+                            <point x="0.11" y="0.5" />
+                            <point x="0.85" y="0.802632" />
+                            <point x="0.5" y="0.368421" />
+                            <point x="0.15" y="0.802632" />
+                            <point x="0.01" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel1" sid="783395616810447">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="560354259435759" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505376" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack1.png">
+                        <collision-poly>
+                            <point x="0.119048" y="0.892473" />
+                            <point x="0.22619" y="0.505376" />
+                            <point x="0.119048" y="0.107527" />
+                            <point x="0.5" y="0.0645161" />
+                            <point x="0.809524" y="0.172043" />
+                            <point x="0.690476" y="0.505376" />
+                            <point x="0.809524" y="0.827957" />
+                            <point x="0.5" y="0.935484" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel3" sid="221134401917387">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="972675628734124" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505376" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen1.png">
+                        <collision-poly>
+                            <point x="0.119048" y="0.892473" />
+                            <point x="0.22619" y="0.505376" />
+                            <point x="0.119048" y="0.107527" />
+                            <point x="0.5" y="0.0645161" />
+                            <point x="0.809524" y="0.172043" />
+                            <point x="0.690476" y="0.505376" />
+                            <point x="0.809524" y="0.827957" />
+                            <point x="0.5" y="0.935484" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel2" sid="136913772377449">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="819500040060274" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505376" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed1.png">
+                        <collision-poly>
+                            <point x="0.119048" y="0.892473" />
+                            <point x="0.22619" y="0.505376" />
+                            <point x="0.119048" y="0.107527" />
+                            <point x="0.5" y="0.0645161" />
+                            <point x="0.809524" y="0.172043" />
+                            <point x="0.690476" y="0.505376" />
+                            <point x="0.809524" y="0.827957" />
+                            <point x="0.5" y="0.935484" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel13" sid="196667635025942">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="242201304851124" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack2.png">
+                        <collision-poly>
+                            <point x="0.738095" y="0.211538" />
+                            <point x="0.988095" y="0.5" />
+                            <point x="0.738095" y="0.788462" />
+                            <point x="0.5" y="0.951923" />
+                            <point x="0.214286" y="0.826923" />
+                            <point x="0.202381" y="0.5" />
+                            <point x="0.214286" y="0.173077" />
+                            <point x="0.5" y="0.0480769" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel14" sid="278483170641481">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="386484989122046" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue2.png">
+                        <collision-poly>
+                            <point x="0.738095" y="0.211538" />
+                            <point x="0.988095" y="0.5" />
+                            <point x="0.738095" y="0.788462" />
+                            <point x="0.5" y="0.951923" />
+                            <point x="0.214286" y="0.826923" />
+                            <point x="0.202381" y="0.5" />
+                            <point x="0.214286" y="0.173077" />
+                            <point x="0.5" y="0.0480769" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel15" sid="754861837296568">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327051121037681" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen2.png">
+                        <collision-poly>
+                            <point x="0.738095" y="0.211538" />
+                            <point x="0.988095" y="0.5" />
+                            <point x="0.738095" y="0.788462" />
+                            <point x="0.5" y="0.951923" />
+                            <point x="0.214286" y="0.826923" />
+                            <point x="0.202381" y="0.5" />
+                            <point x="0.214286" y="0.173077" />
+                            <point x="0.5" y="0.0480769" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel16" sid="524413909447516">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387342856921970" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed2.png">
+                        <collision-poly>
+                            <point x="0.738095" y="0.211538" />
+                            <point x="0.988095" y="0.5" />
+                            <point x="0.738095" y="0.788462" />
+                            <point x="0.5" y="0.951923" />
+                            <point x="0.214286" y="0.826923" />
+                            <point x="0.202381" y="0.5" />
+                            <point x="0.214286" y="0.173077" />
+                            <point x="0.5" y="0.0480769" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel4" sid="384094992867861">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="556705997912475" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505376" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue1.png">
+                        <collision-poly>
+                            <point x="0.119048" y="0.892473" />
+                            <point x="0.22619" y="0.505376" />
+                            <point x="0.119048" y="0.107527" />
+                            <point x="0.5" y="0.0645161" />
+                            <point x="0.809524" y="0.172043" />
+                            <point x="0.690476" y="0.505376" />
+                            <point x="0.809524" y="0.827957" />
+                            <point x="0.5" y="0.935484" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel5" sid="669673325494737">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="127214181379712" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.495146" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack3.png">
+                        <collision-poly>
+                            <point x="0.202381" y="0.834951" />
+                            <point x="0" y="0.504854" />
+                            <point x="0.202381" y="0.165049" />
+                            <point x="0.5" y="0.00970876" />
+                            <point x="0.869048" y="0.106796" />
+                            <point x="0.892857" y="0.504854" />
+                            <point x="0.880952" y="0.902913" />
+                            <point x="0.5" y="0.990291" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel8" sid="929595147226205">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339406732307224" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue3.png">
+                        <collision-poly>
+                            <point x="0.202381" y="0.834951" />
+                            <point x="0" y="0.504854" />
+                            <point x="0.202381" y="0.165049" />
+                            <point x="0.5" y="0.00970876" />
+                            <point x="0.869048" y="0.106796" />
+                            <point x="0.892857" y="0.504854" />
+                            <point x="0.880952" y="0.902913" />
+                            <point x="0.5" y="0.990291" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel7" sid="340325319656300">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="374461493217137" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen3.png">
+                        <collision-poly>
+                            <point x="0.202381" y="0.834951" />
+                            <point x="0" y="0.504854" />
+                            <point x="0.202381" y="0.165049" />
+                            <point x="0.5" y="0.00970876" />
+                            <point x="0.869048" y="0.106796" />
+                            <point x="0.892857" y="0.504854" />
+                            <point x="0.880952" y="0.902913" />
+                            <point x="0.5" y="0.990291" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel6" sid="800706379920980">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948041263328091" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed3.png">
+                        <collision-poly>
+                            <point x="0.202381" y="0.834951" />
+                            <point x="0" y="0.504854" />
+                            <point x="0.202381" y="0.165049" />
+                            <point x="0.5" y="0.00970876" />
+                            <point x="0.869048" y="0.106796" />
+                            <point x="0.892857" y="0.504854" />
+                            <point x="0.880952" y="0.902913" />
+                            <point x="0.5" y="0.990291" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel9" sid="345190053149552">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="289025637776314" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlack4.png">
+                        <collision-poly>
+                            <point x="0.904762" y="0.097561" />
+                            <point x="0.880952" y="0.5" />
+                            <point x="0.904762" y="0.902439" />
+                            <point x="0.5" y="0.987805" />
+                            <point x="0.166667" y="0.829268" />
+                            <point x="0" y="0.5" />
+                            <point x="0.166667" y="0.170732" />
+                            <point x="0.5" y="0.0121951" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel10" sid="358324833554255">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="706359789848144" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyBlue4.png">
+                        <collision-poly>
+                            <point x="0.904762" y="0.097561" />
+                            <point x="0.880952" y="0.5" />
+                            <point x="0.904762" y="0.902439" />
+                            <point x="0.5" y="0.987805" />
+                            <point x="0.166667" y="0.829268" />
+                            <point x="0" y="0.5" />
+                            <point x="0.166667" y="0.170732" />
+                            <point x="0.5" y="0.0121951" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel11" sid="129659927933479">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="717046250609426" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyGreen4.png">
+                        <collision-poly>
+                            <point x="0.904762" y="0.097561" />
+                            <point x="0.880952" y="0.5" />
+                            <point x="0.904762" y="0.902439" />
+                            <point x="0.5" y="0.987805" />
+                            <point x="0.166667" y="0.829268" />
+                            <point x="0" y="0.5" />
+                            <point x="0.166667" y="0.170732" />
+                            <point x="0.5" y="0.0121951" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyModel12" sid="715744045704549">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="665329045217081" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Enemies\enemyRed4.png">
+                        <collision-poly>
+                            <point x="0.904762" y="0.097561" />
+                            <point x="0.880952" y="0.5" />
+                            <point x="0.904762" y="0.902439" />
+                            <point x="0.5" y="0.987805" />
+                            <point x="0.166667" y="0.829268" />
+                            <point x="0" y="0.5" />
+                            <point x="0.166667" y="0.170732" />
+                            <point x="0.5" y="0.0121951" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayAgainButton" sid="177506136221992">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="784423900458857" speed="5">
+                    <frame duration="1" hotspotX="0.454545" hotspotY="0.433333" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\return.png">
+                        <collision-poly>
+                            <point x="0.151515" y="0.1" />
+                            <point x="0.454545" y="0.133333" />
+                            <point x="0.606061" y="0.266667" />
+                            <point x="0.757576" y="0.433333" />
+                            <point x="0.454545" y="0.766667" />
+                            <point x="0.151515" y="0.766667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackgroundWin" sid="473802618519306">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\Backgrounds\darkPurple.png" />
+        </object-type>
+        <object-type name="CompleteStation" sid="679342003065605">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="972382779568453">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="949056376250868" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\kenney_spaceshooterextension\PNG\Sprites\Station\spaceStation_021.png">
+                        <collision-poly>
+                            <point x="0.383721" y="0.229167" />
+                            <point x="0.5" y="0" />
+                            <point x="0.616279" y="0.229167" />
+                            <point x="0.598837" y="0.5" />
+                            <point x="0.610465" y="0.767361" />
+                            <point x="0.5" y="1" />
+                            <point x="0.383721" y="0.770833" />
+                            <point x="0.395349" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RedStar" sid="868759297528771">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="818030773447090">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802398640752965" speed="5">
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Power-ups\star_bronze.png">
+                        <collision-poly>
+                            <point x="0.272727" y="0.28125" />
+                            <point x="0.484848" y="0.0625" />
+                            <point x="0.727273" y="0.28125" />
+                            <point x="0.909091" y="0.5" />
+                            <point x="0.818182" y="0.8125" />
+                            <point x="0.484848" y="0.90625" />
+                            <point x="0.181818" y="0.8125" />
+                            <point x="0.0909091" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="YellowStar" sid="128962996896853">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="408309681388102">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="406362875526648" speed="5">
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Power-ups\star_gold.png">
+                        <collision-poly>
+                            <point x="0.272727" y="0.28125" />
+                            <point x="0.484848" y="0.0625" />
+                            <point x="0.727273" y="0.28125" />
+                            <point x="0.909091" y="0.5" />
+                            <point x="0.818182" y="0.8125" />
+                            <point x="0.484848" y="0.90625" />
+                            <point x="0.181818" y="0.8125" />
+                            <point x="0.0909091" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WhiteStar" sid="364190988395085">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="425601735667617">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="272268829386917" speed="5">
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Power-ups\star_silver.png">
+                        <collision-poly>
+                            <point x="0.272727" y="0.28125" />
+                            <point x="0.484848" y="0.0625" />
+                            <point x="0.727273" y="0.28125" />
+                            <point x="0.909091" y="0.5" />
+                            <point x="0.818182" y="0.8125" />
+                            <point x="0.484848" y="0.90625" />
+                            <point x="0.181818" y="0.8125" />
+                            <point x="0.0909091" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BluePill" sid="683104604505289">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="430282858887071">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="754741665348260">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="775023126604350" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Power-ups\pill_blue.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0869565" />
+                            <point x="0.875" y="0.130435" />
+                            <point x="0.875" y="0.478261" />
+                            <point x="0.708333" y="0.695652" />
+                            <point x="0.5" y="0.869565" />
+                            <point x="0.125" y="0.869565" />
+                            <point x="0.125" y="0.478261" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RedPill" sid="963101823825390">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="741297800700370">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="585062085684178">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="391074873077457" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.47619" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Power-ups\pill_red.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.952381" />
+                            <point x="0.0909091" y="0.904762" />
+                            <point x="0.0909091" y="0.52381" />
+                            <point x="0.272727" y="0.285714" />
+                            <point x="0.5" y="0.0952381" />
+                            <point x="0.909091" y="0.0952381" />
+                            <point x="0.909091" y="0.52381" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="375097394942826">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="360311341485765" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Power-ups\pill_blue.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.047619" />
+                            <point x="0.909091" y="0.0952381" />
+                            <point x="0.909091" y="0.47619" />
+                            <point x="0.727273" y="0.714286" />
+                            <point x="0.5" y="0.904762" />
+                            <point x="0.0909091" y="0.904762" />
+                            <point x="0.0909091" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="488998794460036">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="661695147649960" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\maril\OneDrive\Documentos\Construct 2\Projetos\SpaceBattle\Assets\spaceshooter\PNG\Power-ups\pill_red.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.952381" />
+                            <point x="0.0909091" y="0.904762" />
+                            <point x="0.0909091" y="0.52381" />
+                            <point x="0.272727" y="0.285714" />
+                            <point x="0.5" y="0.0952381" />
+                            <point x="0.909091" y="0.0952381" />
+                            <point x="0.909091" y="0.52381" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="901499061584646">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Game.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>Game Over.xml</layout>
+        <layout>Win.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Game Event Sheet.xml</event-sheet>
+        <event-sheet>Menu Event Sheet.xml</event-sheet>
+        <event-sheet>Game Over Event Sheet.xml</event-sheet>
+        <event-sheet>Win Event Sheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="1" />
+        <global-instance type="Keyboard" uid="2" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
