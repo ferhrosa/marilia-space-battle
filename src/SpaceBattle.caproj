@@ -3,9 +3,9 @@
     <name>SpaceBattle</name>
     <description></description>
     <version>1.0.0.0</version>
-    <author></author>
+    <author>Marília Rosa</author>
     <author-email></author-email>
-    <author-website>http://</author-website>
+    <author-website>https://ferhrosa.github.io/marilia-space-battle/</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3sr71p8ab8e91</unique-id>
     <saved-with-version>24400</saved-with-version>
@@ -36,6 +36,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
